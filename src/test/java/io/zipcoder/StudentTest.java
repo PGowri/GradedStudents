@@ -48,7 +48,7 @@ public class StudentTest {
         Assert.assertEquals(firstName, student1.getFirstName());
     }
     @Test
-    public void getFirstNameTest(){
+    public void getLastNameTest(){
         //given
         String firstName = null;
         Student student1 = new Student();
@@ -57,4 +57,36 @@ public class StudentTest {
         //then
         Assert.assertEquals(firstName, actualFirstName);
     }
+    @Test
+    public void getExamScoreTest(){
+        //given
+        String examScores = "Exam Scores :\n";
+        Student student1 = new Student();
+        //when
+        String actualExamScores = student1.getExamScores();
+        //then
+        Assert.assertEquals(examScores, actualExamScores);
+    }
+
+    @Test
+    public void getNumberOfExamsTaken(){
+        //given
+        int numberOfExams = 0;
+        Student student1 = new Student();
+        //when
+        int actualNumberOfExams = student1.getNumberOfExamsTaken();
+        //then
+        Assert.assertEquals(numberOfExams, actualNumberOfExams);
+    }
+
+//    @Test
+//    public void addExamScoreTest(){
+//        //given
+//        Student student1 = new Student("", "", new Double[]{9.01};
+//        String testScores = "Exam Scores:\n";
+//        //when
+//        student1.addExamScore(10.0);
+//        //then
+//        Assert.assertEquals(testScores, student1.addExamScore());
+//    }
 }
