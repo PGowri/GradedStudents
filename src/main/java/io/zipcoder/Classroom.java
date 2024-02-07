@@ -10,7 +10,7 @@ public class Classroom {
         students = new Student[maxNumberOfStudents];
     }
     public Classroom(){
-        this(30);
+        this(25);
     }
 
     public Student[] getStudents(){
@@ -22,6 +22,17 @@ public class Classroom {
             sum = sum + s.getAverageExamScore();
         }
         return sum / students.length;
+    }
+    public void addStudent(Student student){
+        int i ;
+        for(i = 0; i < students.length; i++){
+            if(students[i]==null){
+                break;
+            }
+        }
+        if(i<students.length){
+            students[i]= student;
+        }
     }
 
 }
